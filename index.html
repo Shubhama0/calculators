@@ -1,0 +1,123 @@
+<htm> 
+<title> form </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    background-color: aquamarine;
+}
+.h4{
+   text-align: center; 
+   color: rgb(25, 144, 39);
+
+}
+.h2{
+   text-align: center; 
+   color: rgb(66, 20, 173);
+
+}
+#re{
+    height: 40px ;
+    width: 200px; ;
+    font-size: xx-large;
+    font-weight: bold;
+     color: rgb(219, 69, 19);
+     float: left;
+     background-color: #f7f7f5;
+     border-radius:20px ;
+}
+#b3{
+background-color: blueviolet;
+margin: 4px;
+height:30px ;
+font-size: larger;
+border-radius:8px ;
+}
+
+#s3{
+background-color: rgb(191, 57, 131);
+margin: 4px;
+height:40px ;
+font-size:xx-large;
+border-radius:9px ;
+}
+#s4{
+background-color: rgb(87, 159, 173);
+margin: 3px;
+height:40px ;
+font-size:xx-large
+}
+.con{
+    background-color: rgb(73, 71, 83);
+    width: 350px;
+    flex-wrap: wrap;
+    margin:  100px auto;
+    padding: 0px ;
+    height:250px ;
+    float:center ;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+</style>
+<body>
+     <h1 class="h2">CALCULATOR</h1>
+     <h3 class="h4">created by Shubham</h3>
+
+    <div class="con"> 
+        <textarea id="re" value="0" font-size="60px"> </textarea>
+<br><br> <br>
+        <button id="b3" onclick="cal(1) ">1</button>
+        <button id="b3" onclick="cal(2) ">2</button>
+        <button id="b3" onclick="cal(3) ">3</button>
+        <button id="b3" onclick="cal(4) ">4</button>
+        <button id="b3" onclick="cal(5) ">5</button> <br>
+        <button id="b3" onclick="cal(6) ">6</button>
+        <button id="b3" onclick="cal(7) ">7</button>
+        <button id="b3" onclick="cal(8) ">8</button>
+        <button id="b3" onclick="cal(9) ">9</button>
+        <button id="b3" onclick="cal(0) ">0</button>
+        <br> <br>
+        <button id="s3" onclick="cal('+') ">+</button>
+        <button id="s3" onclick="cal('-') ">-</button>
+        <button id="s3" onclick="cal('*') ">*</button>
+        <button id="s3" onclick="cal('/') ">/</button> <br>
+        <button id="s4" onclick="res() ">=</button>
+        <button id="s4" onclick="clr() ">c</button>
+    
+ 
+
+</div>
+
+<script> function rem() {
+var a=document.getElementById("a").value;
+var b=document.getElementById("b").value;
+document.getElementById("re").innerHTML=Number(a)+Number(b);
+}
+let v=  document.getElementById("re");
+function cal(k){ 
+v.value+=k;
+}
+ function res() {
+v.value=eval(v.value);
+
+ }
+
+ function clr() {
+v.value='';
+
+ }
+
+</script>
+
+</body>
+
+
+
+
+
+
+
+
+
+</htm>
